@@ -1,5 +1,5 @@
 import React from "react";
-import { storiesOf } from "@storybook/r]eact";
+import { storiesOf } from "@storybook/react";
 
 import { Box, Grommet, Clock } from "grommet";
 import { grommet } from "grommet/themes";
