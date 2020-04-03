@@ -1,24 +1,29 @@
 import React from "react";
 import logo from "./logo.svg";
+import PersistentDrawerLeft from "./components/layout/PersistentDrawerLeft";
 import "./App.css";
+import Pagination from "react-materialize/lib/Pagination";
+import SimpleContainer from "./components/layout/SimpleContainer";
+import GridAreasAlternative from "./components/dashboard/GridAreasAlternative";
+import { Grommet, Box, Grid } from "grommet";
+import Heading from "./components/feedback/Heading";
+import FullWidthGrid from "./components/layout/FullWidthGrid";
+const DEFAULT_QUERY = "redux";
+const BASE_URL = "https://hn.algolia.com/api/v1";
+const PATH_SEARCH = "/search";
+const PARAM_SEARCH = "query";
+const url = `${BASE_URL}${PATH_SEARCH}?${PARAM_SEARCH}${DEFAULT_QUERY}`;
+//console.log(url);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edittt <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PersistentDrawerLeft />
+      <Heading />
+      <Box>
+        <FullWidthGrid />
+      </Box>
+      <Pagination />
     </div>
   );
 }
