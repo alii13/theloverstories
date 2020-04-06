@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/theloverstories/precache-manifest.347cb855f9dd72fa8bcfef9de44c3a6d.js"
+  "/theloverstories/precache-manifest.fb4cb07d4527da6d9ed85b1c738c0483.js"
 );
 
 self.addEventListener('message', (event) => {
