@@ -1,5 +1,7 @@
 import React from "react";
+import Heading from "../feedback/Heading";
 import { Carousel } from "react-materialize";
+import Slider from "./Slider";
 export default () => (
   <Carousel
     carouselId="Carousel-2"
@@ -9,19 +11,19 @@ export default () => (
       indicators: true
     }}
   >
-    <div className="red">
-      <h2>First Panel</h2>
-      <p>This is your first panel</p>
+    <div className="red" style={{ height: "100vh" }}>
+      <Heading />
+      <div></div>
     </div>
     <div className="amber">
       <h2>Second Panel</h2>
       <p>This is your second panel</p>
     </div>
-    <div className="green">
+    <div className="green" style={{ height: "100vh" }}>
       <h2>Third Panel</h2>
       <p>This is your third panel</p>
     </div>
-    <div className="blue">
+    <div className="blue" style={{ height: "100vh" }}>
       <h2>Fourth Panel</h2>
       <p>This is your fourth panel</p>
     </div>

@@ -21,10 +21,16 @@ code {
 }
 .text-center {
   display: flex;
-  color: rgb(68, 68, 68);
+  color: white;
   font-weight: bolder;
   justify-content: center !important;
 }
 .inner-pad {
   padding: 1em !important;
+}
+.content {
+  display: flex !important;
+}
+.containerx {
+  padding: 2em;
 }

@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(0),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
@@ -113,12 +113,13 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" noWrap>
-            Theloverstories
-          </Typography>
-          <FavoriteIcon style={{ fontSize: 30 }}color="secondary" />
+          <a href="/" style={{ color: "white" }}>
+            <Typography variant="h5" noWrap>
+              Theloverstories
+            </Typography>
+          </a>
+          <FavoriteIcon style={{ fontSize: 30 }} color="secondary" />
         </Toolbar>
-        <LinearIndeterminate />
       </AppBar>
       <Drawer
         className={classes.drawer}
@@ -130,9 +131,11 @@ export default function PersistentDrawerLeft() {
         }}
       >
         <div className={classes.drawerHeader}>
-          <Typography variant="h6" gutterBottom>
-            The Lover Stories
-          </Typography>
+          <a href="/" style={{ color: "black" }}>
+            <Typography variant="h6" gutterBottom>
+              The Lover Stories
+            </Typography>
+          </a>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
@@ -146,15 +149,14 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button key={text}>
+          <a href="/create">
+            <ListItem button key="Submit Story">
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <MailIcon />
               </ListItemIcon>
-
-              <ListItemText primary={text} />
+              <ListItemText primary="Submit Story" />
             </ListItem>
-          ))}
+          </a>
         </List>
         <Divider />
         <List>

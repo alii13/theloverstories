@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import SimpleContainer from "./SimpleContainer";
+import SimpleZoom from "../dashboard/SimpleZoom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,9 +26,7 @@ export default function FullWidthGrid() {
         <Hidden smDown>
           <Grid item xs={1} sm={1}></Grid>
         </Hidden>
-        <Grid item xs={12} sm={7}>
-          <SimpleContainer />
-        </Grid>
+        <Grid item xs={12} sm={7}></Grid>
         <Hidden xsDown>
           <Grid item xs={0} sm={3}>
             <SimpleContainer />
